@@ -1,18 +1,33 @@
----
-permalink: /404.html
----
-
-<!--
-  Alphahex by TheDragonRing (thedragonring.me)
-  Copyright © 2017 TheDragonRing - Creative Commons Attribution 4.0 International License
--->
+--- permalink: /404.html ---
 
 <!DOCTYPE html>
+
+<!--
+  Alphahex - A large, responsive website template.
+  ================================================
+  Copyright (c) 2017 TheDragonRing <hello@thedragonring.me>, under the MIT License.
+-->
+
 <html>
-  <head>
-    <title>Redirect | Alphahex</title>
-    <meta charset="UTF-8">
-    <meta name="author" content="TheDragonRing">
-    <meta http-equiv="refresh" content="0; ../">
-  </head>
+
+<head>
+  <title>404 Not Found - Redirecting...</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="TheDragonRing">
+  <script src="js/jquery-3.2.1.js"></script>
+  <script>
+
+    $(document).ready(function () {
+
+      if (window.location.href.slice(-1) === '/') {
+        window.location.assign('../');
+      } else {
+        window.location.assign('./');
+      }
+
+    });
+
+  </script>
+</head>
+
 </html>

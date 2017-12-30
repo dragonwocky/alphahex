@@ -1,17 +1,17 @@
-/*
-  Alphahex by TheDragonRing (thedragonring.me)
-  Copyright © 2017 TheDragonRing - Creative Commons Attribution 4.0 International License
-*/
+/**
+ * Alphahex - A large, responsive website template.
+ * ================================================
+ * Copyright (c) 2017 TheDragonRing <hello@thedragonring.me>, under the MIT License.
+ */
 
 /* GLOBAL */
 
 @charset "UTF-8";
-@import url("font-awesome/css/font-awesome.min.css");
+@import url("font-awesome-4.7.0/css/font-awesome.min.css");
 @import url("https://fonts.googleapis.com/css?family=PT+Sans");
 @import url('https://fonts.googleapis.com/css?family=Enriqueta');
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
 @import url('https://fonts.googleapis.com/css?family=Cairo');
-
 * {
   z-index: 1;
   box-sizing: border-box;
@@ -31,7 +31,7 @@ body {
   color: #fff;
 }
 
-[fadeIn] {
+[data-action="fadeIn"] {
   visibility: hidden;
 }
 
@@ -90,25 +90,25 @@ header ul li a.heading {
   border-right: 2.5px solid #cfcfcf;
 }
 
-header ul li a[active] {
+header ul li a.active {
   background-color: #a61419;
   color: #fff;
   border-radius: 5%;
 }
 
-header ul li a[left] {
+header ul li a.left {
   border-right: 2.25px solid #cfcfcf;
 }
 
-header ul li a[right] {
+header ul li a.right {
   border-left: 2.25px solid #cfcfcf;
 }
 
-header ul li a:not(.heading):not([active]) {
+header ul li a:not(.heading):not(.active) {
   position: relative;
 }
 
-header ul li a:not(.heading):not([active]):after {
+header ul li a:not(.heading):not(.active):after {
   left: 0;
   width: 0;
   bottom: 0;
@@ -118,36 +118,29 @@ header ul li a:not(.heading):not([active]):after {
   border-bottom: 2px solid #000;
 }
 
-header ul li a:not(.heading):not([active]):hover:after {
+header ul li a:not(.heading):not(.active):hover:after {
   width: 100%;
 }
 
-@media screen and (min-width: 731px){
-
+@media screen and (min-width: 731px) {
   header ul.mobile {
     display: none;
   }
-
   #main {
     margin: 100px 30px 125px 30px;
   }
-
 }
 
-@media screen and (max-width: 730px){
-
+@media screen and (max-width: 730px) {
   header ul.normal {
     display: none;
   }
-
   header ul li a.heading {
     border: none;
   }
-
   #main {
     margin: 150px 30px 125px 30px;
   }
-
 }
 
 /* FOOTER */
@@ -204,31 +197,25 @@ footer ul li a {
   font: 30px "Indie Flower", serif;
 }
 
-@media screen and (min-width: 1151px){
-
+@media screen and (min-width: 1151px) {
   #intro img {
     width: 25%;
     display: inline;
   }
-
   #intro div {
     width: 70%;
     float: right;
   }
-
 }
 
-@media screen and (max-width: 1150px){
-
+@media screen and (max-width: 1150px) {
   #intro img {
     width: 100%;
     display: inline;
   }
-
   #intro div {
     text-align: center;
   }
-
 }
 
 /* TITLE */
@@ -259,12 +246,10 @@ footer ul li a {
 /* ABOUT */
 
 @media screen and (min-width: 751px) {
-
   #about {
     max-width: 75%;
     margin: 0 auto;
   }
-
 }
 
 #about {
@@ -294,37 +279,31 @@ footer ul li a {
   font: 27.5px "Cairo", serif;
 }
 
-@media screen and (min-width: 601px){
-
+@media screen and (min-width: 601px) {
   #about p {
     text-align: left;
     line-height: 35px;
     margin-left: 100px;
     font: 27.5px "Cairo", serif;
   }
-
 }
 
-@media screen and (max-width: 600px){
-
+@media screen and (max-width: 600px) {
   #about p {
     text-align: left;
     line-height: 35px;
     margin-left: 50px;
     font: 27.5px "Cairo", serif;
   }
-
 }
 
 /* FORM */
 
 @media screen and (min-width: 751px) {
-
   #form {
     max-width: 75%;
     margin: 0 auto;
   }
-
 }
 
 #form {
@@ -372,7 +351,7 @@ footer ul li a {
   justify-content: center;
 }
 
-#form .actions > a {
+#form .actions>a {
   color: #000;
   margin: 10px;
   padding: 10px 20%;
@@ -384,7 +363,7 @@ footer ul li a {
   font: 30px "Cairo", serif;
 }
 
-#form .actions a[special] {
+#form .actions a.special {
   color: #fff;
   background-color: #a61419;
 }
@@ -392,12 +371,10 @@ footer ul li a {
 /* PROJECTS */
 
 @media screen and (min-width: 751px) {
-
   #projects {
     max-width: 75%;
     margin: 0 auto;
   }
-
 }
 
 #projects {
@@ -424,7 +401,7 @@ footer ul li a {
   justify-content: left;
 }
 
-#projects .buttons > a {
+#projects .buttons>a {
   color: #000;
   margin: 10px;
   padding: 10px;
@@ -436,7 +413,7 @@ footer ul li a {
   font: 25px "Cairo", serif;
 }
 
-#projects .buttons a[special] {
+#projects .buttons a.special {
   color: #fff;
   background-color: #a61419;
 }
@@ -447,28 +424,23 @@ footer ul li a {
   border-top: 5px solid #e9e9e9;
 }
 
-@media screen and (min-width: 901px){
-
+@media screen and (min-width: 901px) {
   #projects img {
     width: 40%;
-    margin: 150px auto;
     float: right;
     display: inline;
     border: 3px solid #cfcfcf;
   }
-
   #projects .text {
     width: 50%;
     text-align: left;
   }
-
   #projects .buttons {
     width: 50%;
     display: flex;
     justify-content: left;
   }
-
-  #projects .buttons > a {
+  #projects .buttons>a {
     color: #000;
     margin: 10px;
     padding: 10px;
@@ -479,28 +451,23 @@ footer ul li a {
     background-color: #f3f3f3;
     font: 25px "Cairo", serif;
   }
-
 }
 
-@media screen and (max-width: 900px){
-
+@media screen and (max-width: 900px) {
   #projects img {
     width: 100%;
     display: inline;
     border: 3px solid #cfcfcf;
   }
-
   #projects .text {
     text-align: center;
   }
-
   #projects .buttons {
     width: 100%;
     display: flex;
     justify-content: center;
   }
-
-  #projects .buttons > a {
+  #projects .buttons>a {
     color: #000;
     margin: 10px;
     padding: 10px;
@@ -511,18 +478,15 @@ footer ul li a {
     background-color: #f3f3f3;
     font: 20px "Cairo", serif;
   }
-
 }
 
 /* BLOG */
 
 @media screen and (min-width: 751px) {
-
   #posts {
     max-width: 75%;
     margin: 0 auto;
   }
-
 }
 
 #posts {
@@ -563,13 +527,11 @@ footer ul li a {
 }
 
 @media screen and (min-width: 751px) {
-
   .row {
     display: flex;
     justify-content: center;
   }
-
-  .row > section {
+  .row>section {
     margin: 30px;
     padding: 10px;
     width: 40%;
@@ -577,17 +539,14 @@ footer ul li a {
     border-radius: 10px;
     background-color: #f3f3f3;
   }
-
 }
 
 @media screen and (max-width: 750px) {
-
   .row {
     display: inline-block;
     justify-content: center;
   }
-
-  .row > section {
+  .row>section {
     margin: 30px auto;
     padding: 10px;
     width: 100%;
@@ -595,18 +554,15 @@ footer ul li a {
     border-radius: 10px;
     background-color: #f3f3f3;
   }
-
 }
 
 /* POST */
 
 @media screen and (min-width: 751px) {
-
   #post {
     max-width: 75%;
     margin: 0 auto;
   }
-
 }
 
 #post {
